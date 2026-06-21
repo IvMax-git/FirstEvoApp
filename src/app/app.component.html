@@ -1,11 +1,8 @@
-<h1>{{ title }}</h1>
-<h2>Дата: {{ currentDate | date:'dd/MM/yyyy' }}</h2>
-<h2>Число {{ myNumber }} + 5 = {{ myNumber | string_pipe }}</h2>
-<h2>Список товаров:</h2>
-<ul>
-  <li *ngFor="let item of items">
-    <strong>{{ item.name }}</strong> - Цена: {{ item.price }} руб. (ID: {{ item.id }})
-  </li>
-</ul>
+<nav>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a> |
+  <a routerLink="/about" routerLinkActive="active">About</a> |
+  <a [routerLink]="['/item', 1, 'details']" routerLinkActive="active">Item 1 Details</a> |
+  <a [routerLink]="['/item', 1, 'list']" [queryParams]="{list: 1, enable: true}" routerLinkActive="active">Item 1 List</a>
+</nav>
 
-<app-componentB></app-componentB>
+<router-outlet></router-outlet>

@@ -1,0 +1,9 @@
+<h2>Item Component</h2>
+<p>Item ID: {{ itemId }}</p>
+
+<nav>
+  <a [routerLink]="'details'" routerLinkActive="active">Details</a> |
+  <a [routerLink]="'list'" [queryParams]="{list: 1, enable: true}" routerLinkActive="active">List</a>
+</nav>
+
+<router-outlet></router-outlet>
