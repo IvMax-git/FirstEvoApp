@@ -1,0 +1,19 @@
+<div class="book-container" *ngIf="book">
+  <h1>Информация о книге</h1>
+  
+  <div class="book-card">
+    <h2>{{ book.name }}</h2>
+    
+    <div class="book-info">
+      <p><strong>Post ID:</strong> {{ book.postId }}</p>
+      <p><strong>ID:</strong> {{ book.id }}</p>
+      <p><strong>Email:</strong> {{ book.email }}</p>
+      <p><strong>Описание:</strong></p>
+      <p class="book-body">{{ book.body }}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!book">
+  <p>Загрузка...</p>
+</div>
