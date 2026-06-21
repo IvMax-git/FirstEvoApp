@@ -1,0 +1,21 @@
+<mat-tab-group>
+  <mat-tab label="Главная">
+    <h3>Главная страница</h3>
+    <p>Перейдите по ссылкам ниже:</p>
+    <nav>
+      <a routerLink="/main" routerLinkActive="active">Main Component</a><br>
+      <a routerLink="/page/item" routerLinkActive="active">Item (Lazy Loading)</a>
+    </nav>
+  </mat-tab>
+  
+  <mat-tab label="Item (Lazy)">
+    <h3>Компонент Item</h3>
+    <p>Это компонент загружается лениво</p>
+    <a routerLink="/page/item" routerLinkActive="active">Открыть Item</a>
+  </mat-tab>
+  
+  <mat-tab label="О приложении">
+    <h3>О приложении</h3>
+    <p>Angular Material + Lazy Loading</p>
+  </mat-tab>
+</mat-tab-group>

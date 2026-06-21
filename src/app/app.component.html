@@ -1,8 +1,14 @@
+<h1>{{ title }}</h1>
+
 <nav>
-  <a routerLink="/contact" routerLinkActive="active">Contact</a> |
-  <a routerLink="/about" routerLinkActive="active">About</a> |
-  <a [routerLink]="['/item', 1, 'details']" routerLinkActive="active">Item 1 Details</a> |
-  <a [routerLink]="['/item', 1, 'list']" [queryParams]="{list: 1, enable: true}" routerLinkActive="active">Item 1 List</a>
+  <a routerLink="/main" routerLinkActive="active">Main</a> |
+  <a routerLink="/page/item" routerLinkActive="active">Item (Lazy)</a>
 </nav>
+
+<hr>
+
+<app-tabs></app-tabs>
+
+<hr>
 
 <router-outlet></router-outlet>
